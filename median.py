@@ -35,7 +35,7 @@ def print_error():
     print("Wrong!")
 
 
-def add_to_median_list(number_list, new_value):
+def add_to_median(number_list, new_value):
     list_numbers.append(new_value)
     median_value = calculate_median(number_list)
     print_median(median_value)
@@ -69,7 +69,7 @@ number_operations = int(str_number_operations)
 for operation in range(0,number_operations):
     command, value = handle_operation()
     if command == 'a':
-        add_to_median_list(list_numbers, value)
+        add_to_median(list_numbers, value)
     if command == 'r':
         remove_to_median(list_numbers,value)
 
