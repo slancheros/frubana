@@ -8,6 +8,7 @@
 out
 gen
 
+__pycache__/
 venv/
 .gitignore
 .idea/
