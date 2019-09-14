@@ -34,7 +34,7 @@ def print_median (median_value):
 str_number_operations= input("Enter number of operations: ")
 list_numbers = list()
 number_operations = int(str_number_operations)
-for operation in range(0,number_operations-1):
+for operation in range(0,number_operations):
     input_operation = input("Enter operation:")
     tokens_operation = input_operation.split(' ')
     command = tokens_operation[0]
@@ -55,4 +55,5 @@ for operation in range(0,number_operations-1):
             print("Wrong!")
         elif len(list_numbers) == 0:
             print("Wrong!")
+
 

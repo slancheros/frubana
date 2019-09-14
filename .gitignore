@@ -1,0 +1,44 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+venv/
+.gitignore
+.idea/
+venv/Include/
+venv/Lib/site-packages/__pycache__/
+venv/Lib/site-packages/_pytest/
+venv/Lib/site-packages/atomicwrites-1.3.0.dist-info/
+venv/Lib/site-packages/atomicwrites/
+venv/Lib/site-packages/attr/
+venv/Lib/site-packages/attrs-19.1.0.dist-info/
+venv/Lib/site-packages/colorama-0.4.1.dist-info/
+venv/Lib/site-packages/colorama/
+venv/Lib/site-packages/importlib_metadata-0.22.dist-info/
+venv/Lib/site-packages/importlib_metadata/
+venv/Lib/site-packages/more_itertools-7.2.0.dist-info/
+venv/Lib/site-packages/more_itertools/
+venv/Lib/site-packages/packaging-19.1.dist-info/
+venv/Lib/site-packages/packaging/
+venv/Lib/site-packages/pluggy-0.13.0.dist-info/
+venv/Lib/site-packages/pluggy/
+venv/Lib/site-packages/py-1.8.0.dist-info/
+venv/Lib/site-packages/py/
+venv/Lib/site-packages/pyparsing-2.4.2.dist-info/
+venv/Lib/site-packages/pyparsing.py
+venv/Lib/site-packages/pytest-5.1.2.dist-info/
+venv/Lib/site-packages/pytest.py
+venv/Lib/site-packages/six-1.12.0.dist-info/
+venv/Lib/site-packages/six.py
+venv/Lib/site-packages/wcwidth-0.1.7.dist-info/
+venv/Lib/site-packages/wcwidth/
+venv/Lib/site-packages/zipp-0.6.0.dist-info/
+venv/Lib/site-packages/zipp.py
+venv/Scripts/py.test.exe
+venv/Scripts/pytest.exe
