@@ -5,13 +5,15 @@ def calculate_median(number_list):
     number_list.sort()
     length = len(number_list)
     median_calculated = None
+    if length == 0:
+        return median_calculated
     if length == 1:
         median_calculated = number_list[0]
     elif length % 2 == 0:
         second_index = int(length/2)
         first_index = second_index - 1
         median_calculated = (number_list[first_index] + number_list[second_index])/2
-        median_calculated = median_to_int( median_calculated)
+        median_calculated = median_to_int(median_calculated)
     elif length % 2 != 0:
         median_index = math.floor(length/2)
         median_calculated = number_list[median_index]
@@ -91,13 +93,12 @@ if str_number_operations.isnumeric():
     number_operations = int(str_number_operations)
     for operation in range(0,number_operations):
         command, value = handle_operation()
-        if not command is None and not value is None:
+        if command is not None and value is not None:
             if command == 'a':
                 add_to_median(list_numbers, value)
             if command == 'r':
                 remove_to_median(list_numbers,value)
 else:
     print("Invalid number of operations.")
-
 
 
