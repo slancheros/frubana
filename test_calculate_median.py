@@ -3,9 +3,9 @@ from median import calculate_median
 
 class TestCalculate_median(TestCase):
     def test_median_list_even(self):
-        my_numbers = [5,6,5,3]
+        my_numbers = [5,6,4,3]
         median_result = calculate_median(my_numbers)
-        self.assertEqual(median_result, 5)
+        self.assertEqual(median_result, 4.5)
 
     def test_median_list_odd(self):
         my_numbers = [78, 67, 89, 65, 23]
