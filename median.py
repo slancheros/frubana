@@ -44,25 +44,30 @@ def add_to_median_list(number_list, new_value):
 def remove_to_median(number_list, new_value):
     if new_value in number_list:
         number_list.remove(new_value)
-        if not list_numbers:
+        if not number_list:
             print_error()
         else:
             median = calculate_median(number_list)
             print_median(median)
     elif new_value not in number_list:
         print_error()
-    elif len(number_list) == 0:
+    elif not number_list:
         print_error()
+
+
+def handle_operation():
+    input_operation = input("Enter operation:")
+    tokens_operation = input_operation.split(' ')
+    command_var = tokens_operation[0]
+    value_var = int(tokens_operation[1])
+    return command_var, value_var
 
 
 str_number_operations= input("Enter number of operations: ")
 list_numbers = list()
 number_operations = int(str_number_operations)
 for operation in range(0,number_operations):
-    input_operation = input("Enter operation:")
-    tokens_operation = input_operation.split(' ')
-    command = tokens_operation[0]
-    value = int(tokens_operation[1])
+    command, value = handle_operation()
     if command == 'a':
         add_to_median_list(list_numbers, value)
     if command == 'r':
