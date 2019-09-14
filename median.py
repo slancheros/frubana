@@ -1,4 +1,3 @@
-import pytest
 import math
 
 
@@ -57,21 +56,48 @@ def remove_to_median(number_list, new_value):
 
 def handle_operation():
     input_operation = input("Enter operation:")
-    tokens_operation = input_operation.split(' ')
-    command_var = tokens_operation[0]
-    value_var = int(tokens_operation[1])
+    if not input_operation:
+        command_var = None
+        value_var = None
+        print_invalid_operation()
+    elif ' ' in input_operation:
+        tokens_operation = input_operation.split(' ')
+        if len(tokens_operation) == 2:
+            if (tokens_operation[0]== "r" or tokens_operation[0] == "a") and (tokens_operation[1].isdigit()):
+                command_var = tokens_operation[0]
+                value_var = int(tokens_operation[1])
+            else:
+                command_var = None
+                value_var = None
+                print_invalid_operation()
+        else:
+            command_var = None
+            value_var = None
+            print_invalid_operation()
+    else:
+        command_var = None
+        value_var = None
+        print_invalid_operation()
     return command_var, value_var
 
 
-str_number_operations= input("Enter number of operations: ")
-list_numbers = list()
-number_operations = int(str_number_operations)
-for operation in range(0,number_operations):
-    command, value = handle_operation()
-    if command == 'a':
-        add_to_median(list_numbers, value)
-    if command == 'r':
-        remove_to_median(list_numbers,value)
+def print_invalid_operation():
+    print("Invalid operation")
+
+
+str_number_operations = input("Enter number of operations: ")
+if str_number_operations.isnumeric():
+    list_numbers = list()
+    number_operations = int(str_number_operations)
+    for operation in range(0,number_operations):
+        command, value = handle_operation()
+        if not command is None and not value is None:
+            if command == 'a':
+                add_to_median(list_numbers, value)
+            if command == 'r':
+                remove_to_median(list_numbers,value)
+else:
+    print("Invalid number of operations.")
 
 
 
