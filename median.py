@@ -31,6 +31,30 @@ def print_median (median_value):
     print("This is the median of the list of numbers: " + str(median_value))
 
 
+def print_error():
+    print("Wrong!")
+
+
+def add_to_median_list(number_list, new_value):
+    list_numbers.append(new_value)
+    median_value = calculate_median(number_list)
+    print_median(median_value)
+
+
+def remove_to_median(number_list, new_value):
+    if new_value in number_list:
+        number_list.remove(new_value)
+        if not list_numbers:
+            print_error()
+        else:
+            median = calculate_median(number_list)
+            print_median(median)
+    elif new_value not in number_list:
+        print_error()
+    elif len(number_list) == 0:
+        print_error()
+
+
 str_number_operations= input("Enter number of operations: ")
 list_numbers = list()
 number_operations = int(str_number_operations)
@@ -40,20 +64,9 @@ for operation in range(0,number_operations):
     command = tokens_operation[0]
     value = int(tokens_operation[1])
     if command == 'a':
-        list_numbers.append(value)
-        median = calculate_median(list_numbers)
-        print_median(median)
+        add_to_median_list(list_numbers, value)
     if command == 'r':
-        if value in list_numbers:
-            list_numbers.remove(value)
-            if not list_numbers:
-                print("Wrong!")
-            else:
-                median = calculate_median(list_numbers)
-                print_median(median)
-        elif value not in list_numbers:
-            print("Wrong!")
-        elif len(list_numbers) == 0:
-            print("Wrong!")
+        remove_to_median(list_numbers,value)
+
 
 
