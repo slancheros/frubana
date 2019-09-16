@@ -12,8 +12,8 @@ The implementation made in the Python files:
 Logic has been implemented by:
 1. Calculating the median just when a value is added to the list
 2. Divided in 4 cases:
-   * When the list is empty
-   * When the list has one element
+   * When the list is empty (Basic)
+   * When the list has one element (Basic)
    * When length is even
    * When length is odd
    
@@ -76,6 +76,18 @@ Since we are searching in an unrooted tree,  this is equivalent on searching on 
 > No recursion was used for this implementation
 
 The reason is that recursion easily got to its maximum level when used. Then an iterative solution was implemented with the following cases:
+
+1. The path (i,i) is trivial case and returned a path with just one element = [(i,i)] (Basic)
+2. If the path to look for was not the trivial case, the edges list of the tree were filtered by those containing i. This is the list of 
+nodes to visit to start.
+3. From there, the basic case is that one of the nodes is the pair (i,j), in which case, the path is only that element, then the search is over, and there are no more nodes to visit.
+4. If (i,j) does not exist, then there should be a path to j that consist on a set of edges. To find it, we have to iterate on the list of nodes to visit, if one of them contains j.  Then is when the concept of leaf appears:
+    * If the node is a leaf, meaning that it does not have any children, looking from the adjacent element of the tuple, and it does not contain j, it is not worth looking and its removed from the list of edges_to_visit.
+    * If the node is **not** a leaf, then the node is added to the path, because it may contain the path to j. Then we iterate by adding the current node's children to the edges_to_visit list and removing from edges_to_visit the nodes already visited ( that we keep in another list).
+    
+5. At the end of this iteration we have a list of edges in the path list. However there are some edges that we have added that did not make part of the path from i to j, because in our last step( iteration) we added those edges with children and we didn't have a way to know if they indeed lead to j.
+
+For that we use the remove_leaves_in_path(path, i, j). What this method does is to verify that every element on the path list has a link towards j. If there is an element that does not have that link, it means is a *leaf* to this list and should be removed. In this case, this a different *leaf* concept than that used in the tree search.
 
 
 
