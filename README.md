@@ -32,7 +32,7 @@ as clean as possible: short methods and code readable.
 Firstly, by the definition of Unrooted Tree as:
 
 >An undirected graph with no cycles
->*Thanks, Wikipedia
+>*Thanks, Wikipedia*
 
 I took some assumptions:
 1. The tree will have no cycles. Since this is an assumption, there is no validation on the relations provided by the user, verifying that there are indeed no cycles.
