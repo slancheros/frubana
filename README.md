@@ -16,8 +16,9 @@ The logic has been developed:
 3. The method calculate_median in median.py is the core method. Other functions and methods have been created for support and to keep code
 as clean as possible: short methods and code readable.
 
-4. Some input validation is provided.
+4. Some input validation is provided, and prompts for input  have been added. The output is as specified on the requirement.
 
-#
+5. It took approx. 2 hours and a half to complete in effective time.
+
 
 
