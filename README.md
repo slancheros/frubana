@@ -41,6 +41,9 @@ I took some assumptions:
 4. A node in the tree is a leaf if only has one relation to another node.
 5. A node can have many children, not only 2.
 6. **There is always a path between 2 given nodes**
+7. There maybe sibling nodes: nodes that are at the same level with in the tree, with different amount of children ( more than 2).
+
+This is how I picture the unrooted tree.
 
 ![Unrooted Tree Example](/images/unrooted_tree.png "Simple Unrooted Tree")
 
