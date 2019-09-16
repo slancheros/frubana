@@ -20,7 +20,6 @@ for node_color in range(0, n - 1):
     tree_edges.append(tuple_pair)
 
 tree = Tree(n, tree_node_list, tree_edges)
-print(tree.nodes)
-print(tree.edges)
 tree.calculate_tree_sum()
-print (tree.display_tree_sum())
+tree.display_tree_sum()
+

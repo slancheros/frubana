@@ -88,10 +88,11 @@ class Tree:
         return sum_colors_node
 
     def calculate_tree_sum(self):
-        for i in range(0, self.n - 1):
+        self.colors_per_node_list.clear()
+        for i in range(0, self.n ):
             self.calculate_sum_for_node(i+1)
-        print(self.colors_per_node_list)
 
     def display_tree_sum(self):
         for item in self.colors_per_node_list:
             print( item )
+        self.colors_per_node_list.clear()

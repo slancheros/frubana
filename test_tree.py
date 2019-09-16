@@ -70,3 +70,6 @@ class TestTree(TestCase):
         j=4
         self.myTree.remove_leaves_in_path(path, i, j)
         self.assertEqual([(3, 2), (2, 4)], path)
+
+    def tearDown(self):
+        self.myTree = None
