@@ -1,11 +1,12 @@
-# 1.Calculate List Median
+# 1. Calculate List Median
 
 The implementation made in the Python files:
 1. median.py has the logic implementation of the list operations.
 2. test_calculate_median.py contains unit tests for median values.
 3. median_ui.py contains the user interaction logic for the solution.
 
-The logic has been developed:
+# Logic implementation
+Logic has been implemented by:
 1. Calculating the median just when a value is added to the list
 2. Divided in 4 cases:
    1. When the list is empty
