@@ -1,7 +1,8 @@
 from unittest import TestCase
 from median import calculate_median
 
-class TestCalculate_median(TestCase):
+
+class TestCalculateMedian(TestCase):
     def test_median_list_even(self):
         my_numbers = [5,6,4,3]
         median_result = calculate_median(my_numbers)
