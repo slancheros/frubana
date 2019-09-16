@@ -89,6 +89,8 @@ nodes to visit to start.
 
 For that we use the remove_leaves_in_path(path, i, j). What this method does is to verify that every element on the path list has a link towards j. If there is an element that does not have that link, it means is a *leaf* to this list and should be removed. In this case, this a different *leaf* concept than that used in the tree search.
 
+Anyway, hope you enjoy my implementation! Thank you :)
+
 
 
 
