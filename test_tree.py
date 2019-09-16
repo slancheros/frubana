@@ -1,5 +1,5 @@
 from unittest import TestCase
-from colors import Tree
+from tree import Tree
 
 
 class TestTree(TestCase):
@@ -11,11 +11,11 @@ class TestTree(TestCase):
 
     def test_calculate_amount_colors(self):
         count_colors = self.myTree.calculate_amount_colors(1,2)
-        self.assertEquals(count_colors, 2)
+        self.assertEqual(count_colors, 2)
 
     def test_find_path_bfs(self):
         path_to_test = self.myTree.find_path_bfs(1,4)
-        self.assertEquals(path_to_test, [(1, 2), (2, 4)])
+        self.assertEqual(path_to_test, [(1, 2), (2, 4)])
 
     def test_is_leaf(self):
         is_leaf = self.myTree.is_leaf((2,4),2)
@@ -35,11 +35,11 @@ class TestTree(TestCase):
 
     def test_calculate_sum_for_node_simple(self):
         sum_for_node = self.myTree.calculate_sum_for_node(1)
-        self.assertEquals(sum_for_node, 10)
+        self.assertEqual(sum_for_node, 10)
 
     def test_calculate_tree_sum(self):
         self.myTree.calculate_tree_sum()
-        self.assertEquals(self.myTree.colors_per_node_list, [10,9,11,9,12])
+        self.assertEqual(self.myTree.colors_per_node_list, [10,9,11,9,12])
 
 
 
