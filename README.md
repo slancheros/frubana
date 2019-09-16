@@ -42,7 +42,7 @@ I took some assumptions:
 5. A node can have many children, not only 2.
 6. **There is always a path between 2 given nodes**
 
-![Unrooted Tree Example](/images/unrooted_tree.jpg "Simple Unrooted Tree")
+![Unrooted Tree Example](/images/unrooted_tree.png "Simple Unrooted Tree")
 
 This analysis took me to the following implementation:
 
