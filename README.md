@@ -9,10 +9,10 @@ The implementation made in the Python files:
 Logic has been implemented by:
 1. Calculating the median just when a value is added to the list
 2. Divided in 4 cases:
-   1. When the list is empty
-   2. When the list has one element
-   3. When length is even
-   4. When length is odd
+   * When the list is empty
+   * When the list has one element
+   * When length is even
+   * When length is odd
    
 3. The method calculate_median in median.py is the core method. Other functions and methods have been created for support and to keep code
 as clean as possible: short methods and code readable.
