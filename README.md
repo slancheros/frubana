@@ -18,7 +18,7 @@ as clean as possible: short methods and code readable.
 
 4. Some input validation is provided, and prompts for input  have been added. The output is as specified on the requirement.
 
-5. It took approx. 2 hours and a half to complete in effective time.
+5. It took approx. **2 hours and a half** to complete in effective time.
 
 
 
