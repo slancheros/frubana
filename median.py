@@ -37,7 +37,7 @@ def print_error():
 
 
 def add_to_median(number_list, new_value):
-    list_numbers.append(new_value)
+    number_list.append(new_value)
     median_value = calculate_median(number_list)
     print_median(median_value)
 
@@ -87,18 +87,6 @@ def print_invalid_operation():
     print("Invalid operation")
 
 
-str_number_operations = input("Enter number of operations: ")
-if str_number_operations.isnumeric():
-    list_numbers = list()
-    number_operations = int(str_number_operations)
-    for operation in range(0,number_operations):
-        command, value = handle_operation()
-        if command is not None and value is not None:
-            if command == 'a':
-                add_to_median(list_numbers, value)
-            if command == 'r':
-                remove_to_median(list_numbers,value)
-else:
-    print("Invalid number of operations.")
+
 
 
